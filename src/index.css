@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #050505;
+  --color-secondary: #111111;
+  --color-accent: #2563EB; /* Blue from logo */
+  --color-accent-hover: #1D4ED8;
+  --color-accent-red: #DC2626; /* Red from logo */
+  --color-accent-red-hover: #B91C1C;
+  --color-text-main: #FFFFFF;
+  --color-text-muted: #9CA3AF;
+  --color-success: #25D366;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-primary text-text-main font-sans antialiased selection:bg-accent selection:text-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+}
+
+/* Custom scrollbar for a luxury feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
